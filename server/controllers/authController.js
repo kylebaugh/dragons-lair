@@ -24,7 +24,7 @@ module.exports = {
 
     login: async (req, res) =>{
         const db = req.app.get('db')
-        const {username, password} = req.body
+        const {username, password} = req.body   
         const foundUser = await db.get_user(username)
         const user = foundUser[0]
         if(!user){
